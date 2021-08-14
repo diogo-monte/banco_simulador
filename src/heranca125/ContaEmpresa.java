@@ -3,7 +3,7 @@ package heranca125;
 public class ContaEmpresa extends Conta {
 	
 	private Double limiteEmprestimo;
-	public static final Double TAXA = 10.;
+	public static final Double TAXA_EMPRESTIMO = 10.;
 
 	public ContaEmpresa() {
 		
@@ -19,9 +19,8 @@ public class ContaEmpresa extends Conta {
 			System.out.println("SEU LIMITE NAO PERMITE ESTE EMPRESTIMO");
 		}
 		else {
-			System.out.println("EMPRESTIMO REALIZADO - (Sera cobrada uma taxa " + TAXA);
-			deposito(valor);
-			saque(TAXA);
+			System.out.println("EMPRESTIMO REALIZADO - (Sera cobrada uma taxa " + TAXA_EMPRESTIMO);
+			deposito(valor - 5);
 			
 		}
 	}

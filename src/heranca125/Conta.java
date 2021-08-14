@@ -2,9 +2,11 @@ package heranca125;
 
 public class Conta {
 	
+	public static final Double TAXA_SAQUE = 5.;
+	
 	private Integer numero;
 	private String dono;
-	private Double saldo;
+	protected Double saldo;
 	
 	public Conta() {
 		
@@ -13,14 +15,11 @@ public class Conta {
 	public Conta(Integer numero, String dono) {
 		this.numero = numero;
 		this.dono = dono;
+		this.saldo= 0.0;
 	}
 
 	public Integer getNumero() {
 		return numero;
-	}
-
-	public void setNumero(Integer numero) {
-		this.numero = numero;
 	}
 
 	public String getDono() {
@@ -36,12 +35,16 @@ public class Conta {
 	}
 	
 	public void saque(Double valor) {
-		this.saldo -= valor;
+		if (valor + TAXA_SAQUE > this.saldo) {
+			System.out.println("VOCE NAO TEM SALDO SUFICIENTE PARA ESTE SAQUE");
+		}
+		else {
+		this.saldo -= valor + TAXA_SAQUE;
 		
 	}
-	
+	}
 	public void deposito(Double valor) {
-		this.saldo -= valor;
+		this.saldo += valor;
 	}
 
 	@Override
