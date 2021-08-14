@@ -21,31 +21,29 @@ public class Principal {
 		
 		Conta c1 = new Conta(1234,"Diogo");
 		System.out.println(c1);
-		c1.deposito(500.);
+		c1.deposito(1000.);
 		System.out.println(c1);
-		c1.saque(400.);
-		System.out.println(c1);
-		c1.saque(95.);
+		c1.saque(200.);
 		System.out.println(c1);
 		
-		System.out.println("----------------------------------------------");
 		
-		ContaPoupanca cp1 = new ContaPoupanca(4567, "Marina", 0.01);
+		System.out.println("----------------------------------------------------------");
+		
+		Conta cp1 = new ContaPoupanca(4567, "Marina", 0.01);
 		System.out.println(cp1);
-		cp1.deposito(500.);
+		cp1.deposito(1000.);
 		System.out.println(cp1);
-		cp1.saque(400.);
-		System.out.println(cp1);
-		cp1.atualizarSaldo();
+		cp1.saque(200.);
 		System.out.println(cp1);
 		
-		System.out.println("----------------------------------------------");
 		
-		ContaEmpresa ce1 = new ContaEmpresa(7894, "Patricia", 5000.);
+		System.out.println("----------------------------------------------------------");
+		
+		Conta ce1 = new ContaEmpresa(7894, "Patricia", 5000.);
 		System.out.println(ce1);
-		ce1.deposito(500.);
+		ce1.deposito(1000.);
 		System.out.println(ce1);
-		ce1.saque(400.);
+		ce1.saque(200.);
 		System.out.println(ce1);
 		
 		

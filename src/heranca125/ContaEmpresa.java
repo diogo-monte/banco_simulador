@@ -28,15 +28,21 @@ public class ContaEmpresa extends Conta {
 			System.out.println("SEU LIMITE NAO PERMITE ESTE EMPRESTIMO");
 		}
 		else {
-			System.out.println("EMPRESTIMO REALIZADO - (Sera cobrada uma taxa " + TAXA_EMPRESTIMO);
-			deposito(valor - 5);
+			System.out.println("EMPRESTIMO REALIZADO - (Sera cobrada uma taxa de $ " + TAXA_EMPRESTIMO + ")");
+			System.out.println("OBS.: Sera creditado em sua conta $ " + valor);
+			deposito(valor - TAXA_EMPRESTIMO);
 			
 		}
 	}
 	
 	@Override
 	public void saque(Double valor) {
-		this.saldo -= (valor + TAXA_SAQUE);
+		super.saque(valor + TAXA_SAQUE);
+	}
+	
+	@Override
+	public String toString() {
+		return "Conta Empresa - Numero: " + getNumero() + ", Dono: " + getDono() + ", Saldo: " + getSaldo();
 	}
 	
 

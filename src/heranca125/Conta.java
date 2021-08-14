@@ -6,7 +6,7 @@ public class Conta {
 	
 	private Integer numero;
 	private String dono;
-	protected Double saldo;
+	private Double saldo;
 	
 	public Conta() {
 		
@@ -49,7 +49,7 @@ public class Conta {
 
 	@Override
 	public String toString() {
-		return "Conta - Numero: " + getNumero() + ", Dono: " + getDono() + ", Saldo: " + getSaldo();
+		return "Conta Corrente - Numero: " + getNumero() + ", Dono: " + getDono() + ", Saldo: " + getSaldo();
 	}
 	
 	

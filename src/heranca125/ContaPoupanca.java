@@ -26,8 +26,13 @@ public class ContaPoupanca extends Conta {
 	
 	@Override
 	public void saque(Double valor) {
-		this.saldo -= valor;
-		
+		super.saque(valor);
+		super.deposito(super.TAXA_SAQUE);
+	}
+	
+	@Override
+	public String toString() {
+		return "Conta Poupanca - Numero: " + getNumero() + ", Dono: " + getDono() + ", Saldo: " + getSaldo();
 	}
 
 }
